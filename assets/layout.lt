@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="<%= prefix %>">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%! block redirect %><%! endblock %>
+	<title><%! block title %><%! endblock %></title>
+
+	<link rel="stylesheet" href="css/webshop.css">
+	<link rel="stylesheet" href="css/foundation-icons.css">
+	<link rel="stylesheet" href="assets/owl/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/owl/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="https://museum-gestaltung.ch/wp-content/themes/_tk/mfgz-shared/mfgz-base/mfgz-base.css">
+	<link rel="stylesheet" href="https://museum-gestaltung.ch/wp-content/themes/_tk/mfgz-shared/mfgz-footer/mfgz-footer.css">
+	<link rel="stylesheet" href="https://museum-gestaltung.ch/wp-content/themes/_tk/mfgz-shared/mfgz-menu/mfgz-menu.css">
+	<link rel="stylesheet" href="assets/mfgz-shop.css">
+
+	<script src="js/vendor/modernizr.js"></script>
+	<script>
+	function iframe_breakout()
+	{
+		if (top.location != location)
+			top.location.href = document.location.href;
+	}
+	</script>
+
+		<link rel="icon" href="https://museum-gestaltung.ch/wp-content/uploads/2018/02/cropped-favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" href="https://museum-gestaltung.ch/wp-content/uploads/2018/02/cropped-favicon-192x192.png" sizes="192x192" />
+		<link rel="apple-touch-icon-precomposed" href="https://museum-gestaltung.ch/wp-content/uploads/2018/02/cropped-favicon-180x180.png" />
+		<meta name="msapplication-TileImage" content="https://museum-gestaltung.ch/wp-content/uploads/2018/02/cropped-favicon-270x270.png" />
+
+</head>
+
+<body onload="iframe_breakout()" class="
+	<%! block slug %><%! endblock %>
+	<%= _d('mfgz-shop','en') %>
+	<% if op ~= nil then %><%= op %><% end %>
+	<% if op ~= nil and id ~= nil then %><%= op %><% end %><% if id~= nil then %>-<%= id %><% end %>
+	">
+<div class="row">
+	<div class="small-12 colums mfgz-menu">
+		<%! block dynamicMenu %><%! endblock %>
+		<div class="small-12 medium-6 large-4 columns">
+		</div>
+	</div>
+	<div class="small-12 columns titles">
+		<div class="page-title-container">
+			<h1 class="page-title"><a href="/"><%= config.shopShortName %></a></h1>
+		</div>
+		<div class="cart-container">
+			<%! block cart %><%! endblock %>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div class="row">
+	<div class="small-12 columns">
+		<div class="shop-menu">
+			<div class="row">
+			<div class="small-12 columns mobile-filter">
+				<div class="show-filter-button">
+					<a class="" href="#">
+						<% if group_id ~= nil then
+							local vname = group
+							if string.len(vname) > 28 then vname = string.sub(vname, 1, 28).."..." end
+						%>
+							<%= vname %>
+						<% elseif attribute_id ~= nil then
+							local wname = attribute
+							if string.len(wname) > 28 then wname = string.sub(wname, 1, 28).."..." end
+							%>
+							<%= wname %>
+						<% else %>Filter<% end %>
+					</a>
+					<div class="for-filter arrow-container">
+							<span class="arrow arrow-down"></span>
+					</div>
+				</div>
+			</div>
+			<div class="shop-menu-inside">
+				<div class="section-title">
+					<div class="small-12 medium-12 large-8 columns">
+						<%! block title %><%! endblock %>
+					</div>
+				</div>
+				<%! block quicksearch %><%! endblock %>
+				<%! block oberwarengruppen %><%! endblock %>
+				<div class="small-12 medium-12 large-5 columns">
+					<%! block attributes %><%! endblock %>
+					<%! block groups %><%! endblock %>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<%! block content %>Seiteninhalt<%! endblock %>
+	<%! block shopinfo %><%! endblock %>
+	<%! block weitereprodukte %><%! endblock %>
+	<%! block footer %><%! endblock %>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation/foundation.js"></script>
+	<script src="js/foundation/foundation.alert.js"></script>
+	<script src="js/foundation/foundation.topbar.js"></script>
+	<script src="js/foundation/foundation.dropdown.js"></script>
+	<script src="js/foundation/foundation.abide.js"></script>
+	<script src="js/foundation/foundation.reveal.js"></script>
+	<script src="js/foundation/foundation.tooltip.js"></script>
+	<script src="assets/owl/owl.carousel.min.js"></script>
+	<script src="https://www.eguide.ch/wp-content/themes/_tk/includes/js/mfgz-grid.js"></script>
+	<script src="assets/mfgz-shop.js"></script>
+<script>
+	$(document).foundation();
+</script>
+
+</body>
+</html>
