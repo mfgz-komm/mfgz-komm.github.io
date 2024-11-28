@@ -11,9 +11,9 @@
 	<link rel="stylesheet" href="css/foundation-icons.css">
 	<link rel="stylesheet" href="assets/owl/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="assets/owl/assets/owl.theme.default.min.css">
-	<link rel="stylesheet" href="https://museum-gestaltung.ch/wp-content/themes/_tk/mfgz-shared/mfgz-base/mfgz-base.css">
-	<link rel="stylesheet" href="https://museum-gestaltung.ch/wp-content/themes/_tk/mfgz-shared/mfgz-footer/mfgz-footer.css">
-	<link rel="stylesheet" href="https://museum-gestaltung.ch/wp-content/themes/_tk/mfgz-shared/mfgz-menu/mfgz-menu.css">
+	<link rel="stylesheet" href="https://mfgz-komm.github.io/assets/css/mfgz-base.css">
+	<link rel="stylesheet" href="https://mfgz-komm.github.io/assets/css/mfgz-footer.css">
+	<link rel="stylesheet" href="https://mfgz-komm.github.io/assets/css/mfgz-menu.css">
 	<link rel="stylesheet" href="assets/mfgz-shop.css">
 
 	<script src="js/vendor/modernizr.js"></script>
